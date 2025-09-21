@@ -15,7 +15,7 @@ const { createClient } = require('@supabase/supabase-js');
 const WSS_URL      = process.env.WSS_URL || 'wss://testnet.dplabs-internal.com';
 const CONTRACT     = (process.env.CONTRACT || '').trim();
 const SUPABASE_URL = (process.env.SUPABASE_URL || '').trim();
-const SUPABASE_KEY = (process.env.SUPABASE_KEY || '').trim();
+const SUPABASE_KEY = (process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_KEY || '').trim();
 const DECIMALS     = parseInt(process.env.DECIMALS || '6', 10);
 
 if (!CONTRACT) {
